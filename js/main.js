@@ -27,5 +27,8 @@ src.reveal('.reviews-container', { delay: 200, origin: 'top' }) // Уменьш�
 src.reveal('.newsletter .box', { delay: 150, origin: 'bottom' }) // Уменьшил задержку и продолжительность для .newsletter .box
 
 
-
+function show(state) {
+    document.getElementById('regWindow').style.display = state;
+    document.getElementById('grey-background').style.display = state;
+}
 
