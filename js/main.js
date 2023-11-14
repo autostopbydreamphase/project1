@@ -25,3 +25,7 @@ src.reveal('.ride-container .box', { delay: 200, origin: 'top' }) // Умень�
 src.reveal('.services-container .box', { delay: 200, origin: 'top' }) // Уменьшил задержку и продолжительность для .services-container .box
 src.reveal('.reviews-container', { delay: 200, origin: 'top' }) // Уменьшил задержку и продолжительность для .reviews-container
 src.reveal('.newsletter .box', { delay: 150, origin: 'bottom' }) // Уменьшил задержку и продолжительность для .newsletter .box
+
+
+
+
