@@ -7,4 +7,4 @@ This is a course project for studies
 - authentication;
 * order fulfillment;
 + subscription to the newsletter;
--familiarization with frequently asked questions
+- familiarization with frequently asked questions
