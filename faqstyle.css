@@ -108,3 +108,17 @@
 .chunk + .chunk {
   margin-top: 1rem;
 }
+
+
+/* CSS стили для кнопки в виде крестика */
+.close-button {
+  position: absolute;
+  top: 10px; /* отступ от верхнего края */
+  right: 10px; /* отступ от правого края */
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 9999; /* на случай, если есть другие элементы с позиционированием */
+  color: #000; /* цвет крестика */
+}
