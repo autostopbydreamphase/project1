@@ -457,6 +457,11 @@ header {
     /*блоки*/
     padding: 50px 40px;
   }
+  #regWindow
+  {
+    width: 400px;
+    height: 500px;
+  }
 }
 
 @media (max-width: 881px) {
@@ -467,11 +472,21 @@ header {
     bottom: 0.2rem;
     left: 40px;
   }
+  #regWindow
+  {
+    width: 370px;
+    height: 500px;
+  }
 }
 
 @media (max-width: 797px) {
   header {
     padding: 11px 40px;
+  }
+  #regWindow
+  {
+    width: 350px;
+    height: 500px;
   }
   #menu-icon {
     display: initial;
@@ -552,6 +567,11 @@ header {
   header {
     padding: 4px 40px;
   }
+  #regWindow
+  {
+    width: 320px;
+    height: 500px;
+  }
 }
 @media (max-width: 350px) {
   header {
@@ -577,5 +597,10 @@ header {
   }
   .services-container {
     grid-template-columns: repeat(auto-fit, minmax(254px, auto));
+  }
+  #regWindow
+  {
+    width: 320px;
+    height: 500px;
   }
 }

@@ -11,6 +11,17 @@
   --gradient2: linear-gradient(350deg, rgba(183,85,221,1) 10%, rgba(85,233,241,1) 100%);
 }
 
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 5rem;
+}
+
 .staggered-list-content {
   max-width: 400px;
   margin: 2rem auto;
@@ -112,10 +123,12 @@
 
 /* CSS стили для кнопки в виде крестика */
 .close-button {
-  position: absolute;
+  position: fixed;
   top: 10px; /* отступ от верхнего края */
   right: 10px; /* отступ от правого края */
   background: none;
+  size:100%;
+  width: 35px;
   border: none;
   font-size: 24px;
   cursor: pointer;
