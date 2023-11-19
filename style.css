@@ -423,11 +423,15 @@ header {
   outline: none;
 }
 
-.newsletter .box .btn {
-  background: linear-gradient(#8c2fb1, #36cbd2);
+.newsletter .box .btn { 
+  background: linear-gradient(#b44cdd, #53eef6);
   color: #fff;
   padding: 8px 20px;
   border-radius: 0.5rem;
+}
+
+.newsletter .box .btn:hover {
+  background: linear-gradient(#d071f5, #75eff5);
 }
 
 .copyright {
