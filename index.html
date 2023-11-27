@@ -32,15 +32,15 @@
       <li><a href="#reviews">Отзывы</a></li>
     </ul>
     <div class="header-btn">
-      <a href="#" class="sign-up" onclick="show('block')">Зарегистрироваться</a>
-      <a href="#" class="sign-in" onclick="show('block')">Войти</a>
+      <a href="#" class="sign-up" onclick="showRegForm('block')">Зарегистрироваться</a>
+      <a href="#" class="sign-in" onclick="showLogForm('block')">Войти</a>
     </div>
   </header>
 
   <section style="padding: 0px;">
-    <div id="grey-background" onclick="show('none')"></div>
+    <div id="grey-background1" onclick="showRegForm('none')"></div>
     <div id="regWindow">
-      <img src="img/x-circle.svg" alt="cross" onclick="show('none')" class="x-circle">
+      <img src="img/x-circle.svg" alt="cross" onclick="showRegForm('none')" class="x-circle">
       <div class="regForm">
         <form action="index.html" name="firstForm">
           <input type="text" placeholder="e-mail" name="email" class="input">
@@ -49,6 +49,19 @@
           <input type="text" placeholder="password confirmation" name="passConfirm" class="input">
           <input type="text" placeholder="number driver license" name="numLicense" class="input">
           <input type="text" placeholder="phone number" name="phoneNum" class="input">
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 0px;">
+    <div id="grey-background2" onclick="showLogForm('none')"></div>
+    <div id="logWindow">
+      <img src="img/x-circle.svg" alt="cross" onclick="showLogForm('none')" class="x-circle">
+      <div class="regForm">
+        <form action="index.html" name="firstForm">
+          <input type="text" placeholder="e-mail" name="email" class="input">
+          <input type="text" placeholder="password" name="pass" class="input">
         </form>
       </div>
     </div>

@@ -26,9 +26,14 @@ src.reveal(".services-container .box", { delay: 200, origin: "top" }); // Уме
 src.reveal(".reviews-container", { delay: 200, origin: "top" }); // Уменьшил задержку и продолжительность для .reviews-container
 src.reveal(".newsletter .box", { delay: 150, origin: "bottom" }); // Уменьшил задержку и продолжительность для .newsletter .box
 
-function show(state) {
+function showRegForm(state) {
   document.getElementById("regWindow").style.display = state;
-  document.getElementById("grey-background").style.display = state;
+  document.getElementById("grey-background1").style.display = state;
+}
+
+function showLogForm(state) {
+  document.getElementById("logWindow").style.display = state;
+  document.getElementById("grey-background2").style.display = state;
 }
 
 (function ($) {
