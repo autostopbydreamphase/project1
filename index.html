@@ -8,14 +8,6 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <title>Roady - comfort is our main aim</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/util.css">
-  <link rel="stylesheet" href="https://cdn.jsdeliver.net/npm/boxicons@latest/css/boxicons.min.css">
-  <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
   <link rel="icon" href="img/icons8-tesla-model-x-96.png">
 </head>
 
@@ -41,27 +33,54 @@
     <div id="grey-background1" onclick="showRegForm('none')"></div>
     <div id="regWindow">
       <img src="img/x-circle.svg" alt="cross" onclick="showRegForm('none')" class="x-circle">
+      <img src="img/icons8-tesla-model-x-96.png" alt="" class="formLogo">
       <div class="regForm">
-        <form action="index.html" name="firstForm">
-          <input type="text" placeholder="e-mail" name="email" class="input">
-          <input type="text" placeholder="e-mail confirmation" name="emailConfirm" class="input">
-          <input type="text" placeholder="password" name="pass" class="input">
-          <input type="text" placeholder="password confirmation" name="passConfirm" class="input">
-          <input type="text" placeholder="number driver license" name="numLicense" class="input">
-          <input type="text" placeholder="phone number" name="phoneNum" class="input">
+        <form action="main.html" name="firstForm">
+          <h1 class="formH1">Регистрация</h1>
+          <input type="text" placeholder="Электронная почта" name="e-mail" id="e-mail" class="formField"
+            autocomplete="username">
+          <input type="text" placeholder="Подтверждение элекетронной почты" name="e-mailConfirmation"
+            id="e-mailConfirmation" class="formField" autocomplete="username">
+          <input type="password" placeholder="Пароль" name="password" id="password" class="formField">
+          <input type="password" placeholder="Подтверждение пароля" name="passwordConfirmation"
+            id="passwordConfirmation" class="formField">
+          <input type="text" placeholder="Номер водительских прав" name="numberDriverLicense" id="numberDriverLicense"
+            class="formField">
+          <input type="text" placeholder="Мобильный номер" name="phoneNumber" id="phoneNumber" class="formField">
+          <button class="btn" onclick="addToLocalStorage()" type="submit" style="font-weight: 700;">Зарегистрироваться</button>
+          <div class="gotoLogin">
+            <p style="color:darkgrey;">
+              Есть аккаунт?
+              <a href="#" style="color:#bc4fe7;" onclick="showLogForm('block'); closeRegForm('none'); return false;">Войти</a>
+            </p>
+          </div>
         </form>
       </div>
     </div>
-  </section>  
+  </section>
 
   <section style="padding: 0px;">
     <div id="grey-background2" onclick="showLogForm('none')"></div>
     <div id="logWindow">
       <img src="img/x-circle.svg" alt="cross" onclick="showLogForm('none')" class="x-circle">
+      <img src="img/icons8-tesla-model-x-96.png" alt="" class="formLogo">
       <div class="regForm">
         <form action="index.html" name="firstForm">
-          <input type="text" placeholder="e-mail" name="email" class="input">
-          <input type="text" placeholder="password" name="pass" class="input">
+          <h1 class="formH1">Войти</h1>
+          <input type="text" placeholder="e-mail" name="e-mail" class="formField">
+          <input type="password" placeholder="password" name="pasword" class="formField"
+            autocomplete="current-password">
+          <button class="btn" style="font-weight: 700;">Войти</button>
+          <div class="gotoRegistr">
+            <p style="color:darkgrey;">Нет аккаунта?</p>
+            <a href="#" style="color:#bc4fe7;">
+              <p onclick="showRegForm('block'); closeLogForm('none'); return false;">Зарегистрироваться</p>
+            </a>
+            <p style="margin-top: 10px; color:darkgrey;">Забыли пароль?</p>
+            <a href="#" style="color:#bc4fe7;">
+              <p>Восстановить пароль</p>
+            </a>
+          </div>
         </form>
       </div>
     </div>
@@ -76,17 +95,17 @@
       <form action="">
         <div class="input-box">
           <span>Местоположение</span>
-          <input type="search" name="" id="" placeholder="Search Places">
+          <input type="search" name="" id="search" placeholder="Search Places">
         </div>
         <div class="input-box">
           <span>Начало аренды</span>
-          <input type="date" name="" id="">
+          <input type="date" name="dateStart" id="dateStart">
         </div>
         <div class="input-box">
           <span>Конец аренды</span>
-          <input type="date" name="" id="">
+          <input type="date" name="dateEnd" id="dateEnd">
         </div>
-        <input type="submit" name="" id="" class="btn" onclick="showLogForm('block')">
+        <input type="submit" name="submitButton" id="submitButton" class="btn" onclick="showLogForm('block')">
       </form>
     </div>
   </section>
@@ -234,7 +253,7 @@
           Мы стремимся обеспечить каждому уникальный и незабываемый опыт аренды автомобилей.
           Узнайте, как мы делаем ваше путешествие ещё более комфортным и увлекательным.</p>
 
-          <!-- !faq.html -->
+        <!-- !faq.html -->
 
         <a href="faq.html" class="btn">Часто задаваемые вопросы</a>
 
@@ -259,7 +278,10 @@
           <i class='bx bxs-star'></i>
           <i class='bx bxs-star'></i>
           <i class='bx bxs-star'></i>
-          <p>Это приложение - находка для путешественников! Я пользуюсь им уже несколько месяцев и всегда нахожу идеальный вариант для поездок. Интерфейс интуитивно понятен, что позволяет быстро найти автомобиль нужного класса. Цены приятно удивляют, особенно учитывая качество предоставляемых услуг. Однажды возникла проблема с бронированием, но поддержка помогла оперативно и профессионально. </p>
+          <p>Это приложение - находка для путешественников! Я пользуюсь им уже несколько месяцев и всегда нахожу
+            идеальный вариант для поездок. Интерфейс интуитивно понятен, что позволяет быстро найти автомобиль нужного
+            класса. Цены приятно удивляют, особенно учитывая качество предоставляемых услуг. Однажды возникла проблема с
+            бронированием, но поддержка помогла оперативно и профессионально. </p>
         </div>
       </div>
 
@@ -274,7 +296,10 @@
           <i class='bx bxs-star'></i>
           <i class='bx bxs-star'></i>
           <i class='bx bxs-star-half'></i>
-          <p>Это приложение стало для меня настоящим спасением во время командировок. Широкий выбор автомобилей, начиная от экономичных до премиальных моделей, позволяет выбрать подходящий вариант для любых нужд. Очень удобно, что все операции можно совершить прямо через приложение: от поиска авто до подтверждения заказа. Клиентская поддержка отзывчива и оперативно решает возникающие вопросы. Спасибо за отличный сервис!</p>
+          <p>Это приложение стало для меня настоящим спасением во время командировок. Широкий выбор автомобилей, начиная
+            от экономичных до премиальных моделей, позволяет выбрать подходящий вариант для любых нужд. Очень удобно,
+            что все операции можно совершить прямо через приложение: от поиска авто до подтверждения заказа. Клиентская
+            поддержка отзывчива и оперативно решает возникающие вопросы. Спасибо за отличный сервис!</p>
         </div>
       </div>
 
@@ -289,44 +314,40 @@
           <i class='bx bxs-star'></i>
           <i class='bx bxs-star'></i>
           <i class='bx bxs-star'></i>
-          <p>Пользуюсь этим приложением уже месяц, и это действительно удобный способ аренды автомобиля. Впечатлен их широким выбором машин и прозрачными тарифами. Поиск и бронирование занимают минимум времени благодаря интуитивному интерфейсу. Один раз возникли вопросы по оплате, но поддержка решала их быстро и эффективно. Рекомендую это приложение всем, кто ценит качество обслуживания и простоту процесса аренды.</p>
+          <p>Пользуюсь этим приложением уже месяц, и это действительно удобный способ аренды автомобиля. Впечатлен их
+            широким выбором машин и прозрачными тарифами. Поиск и бронирование занимают минимум времени благодаря
+            интуитивному интерфейсу. Один раз возникли вопросы по оплате, но поддержка решала их быстро и эффективно.
+            Рекомендую это приложение всем, кто ценит качество обслуживания и простоту процесса аренды.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- !NusLetter -->
-  
+
   <section class="newsletter">
     <h2>Подпишитесь на нашу рассылку</h2>
     <div class="box">
-      <input type="text" placeholder="Enter Your Email...">
-      <a href="#" class="btn">Подписаться</a>
+      <input type="text" placeholder="Enter Your Email..." id="telegramMessageInput">
+      <a class="btn" onclick="sendToTelegram()">Подписаться</a>
     </div>
   </section>
 
   <div class="copyright">
-    <p>&#169;kidisafraidtobealone@gmail.com</p>
+    <p>&#169; kidisafraidtobealone@gmail.com</p>
     <div class="social">
       <a href="https://vk.com/whomuffin7331"><img src="img/icons8-vk-24.png" alt=""></a>
       <a href="https://t.me/autostopbydreamphase"><img src="img/icons8-telegram-25.png" alt=""></a>
       <a href="https://github.com/autostopbydreamphase"><img src="img/icons8-github-50.png" alt=""></a>
     </div>
   </div>
+
   <div id="grey-background" onclick="show('none')"></div>
   <!--ScrollReveal-->
   <script src="https://unpkg.com/scrollreveal"></script>
-
   <!--Link To JS-->
-  <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-	<script src="vendor/animsition/js/animsition.min.js"></script>
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-	<script src="vendor/select2/select2.min.js"></script>
-	<script src="vendor/daterangepicker/moment.min.js"></script>
-	<script src="vendor/daterangepicker/daterangepicker.js"></script>
-	<script src="vendor/countdowntime/countdowntime.js"></script>
   <script src="js/main.js"></script>
+
 </body>
 
 </html>

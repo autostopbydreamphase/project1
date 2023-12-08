@@ -11,6 +11,10 @@
   --gradient2: linear-gradient(350deg, rgba(183,85,221,1) 10%, rgba(85,233,241,1) 100%);
 }
 
+body{
+  background: #e7e7e7;
+}
+
 html::-webkit-scrollbar {
   width: 0.5rem;
 }
@@ -54,6 +58,7 @@ html::-webkit-scrollbar-thumb {
   flex-direction: row;
   align-items: center;
   padding: 1rem;
+  box-shadow: 0 0 10px rgb(92, 92, 92,0.3);
 }
 
 .avatar {
@@ -95,8 +100,7 @@ html::-webkit-scrollbar-thumb {
   background: var(--gradient2);
   padding: 2rem;
   flex-direction: column;
-
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 1);
 }
 
 .additional-content {
