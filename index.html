@@ -37,21 +37,26 @@
       <div class="regForm">
         <form action="main.html" name="firstForm">
           <h1 class="formH1">Регистрация</h1>
+          <hr class="horizontal-line">
           <input type="text" placeholder="Электронная почта" name="e-mail" id="e-mail" class="formField"
-          autocomplete="username">
+            autocomplete="username">
           <input type="text" placeholder="Подтверждение элекетронной почты" name="e-mailConfirmation"
             id="e-mailConfirmation" class="formField" autocomplete="username">
-          <input type="password" placeholder="Пароль" name="password" id="password" class="formField" autocomplete="new-password">
+          <input type="password" placeholder="Пароль" name="password" id="password" class="formField"
+            autocomplete="new-password">
           <input type="password" placeholder="Подтверждение пароля" name="passwordConfirmation"
             id="passwordConfirmation" class="formField" autocomplete="new-password">
           <input type="text" placeholder="Номер водительских прав" name="numberDriverLicense" id="numberDriverLicense"
             class="formField">
           <input type="text" placeholder="Мобильный номер" name="phoneNumber" id="phoneNumber" class="formField">
-          <button class="btn" onclick="addToLocalStorage(event)" type="submit" style="font-weight: 700;">Зарегистрироваться</button>
+          <hr class="horizontal-line">
+          <button class="btn" onclick="addToLocalStorage(event)" type="submit"
+            style="font-weight: 700;">Зарегистрироваться</button>
           <div class="gotoLogin">
             <p style="color:darkgrey;">
               Есть аккаунт?
-              <a href="#" style="color:#bc4fe7;" onclick="showLogForm('block'); closeRegForm('none'); return false;">Войти</a>
+              <a href="#" style="color:#bc4fe7;"
+                onclick="showLogForm('block'); showRegForm('none'); return false;">Войти</a>
             </p>
           </div>
         </form>
@@ -67,14 +72,17 @@
       <div class="regForm">
         <form action="main.html" name="firstForm">
           <h1 class="formH1">Войти</h1>
-          <input type="text" placeholder="e-mail" name="e-mail" class="formField" autocomplete="username" id="emailLogin">
+          <hr class="horizontal-line">
+          <input type="text" placeholder="e-mail" name="e-mail" class="formField" autocomplete="username"
+            id="emailLogin">
           <input type="password" placeholder="password" name="password" class="formField"
             autocomplete="current-password" id="passwordLogin">
+            <hr class="horizontal-line">
           <button class="btn" style="font-weight: 700;" onclick="checkFromLocalStorage(event)">Войти</button>
           <div class="gotoRegistr">
             <p style="color:darkgrey;">Нет аккаунта?</p>
             <a href="#" style="color:#bc4fe7;">
-              <p onclick="showRegForm('block'); closeLogForm('none'); return false;">Зарегистрироваться</p>
+              <p onclick="showRegForm('block'); showLogForm('none'); return false;">Зарегистрироваться</p>
             </a>
             <p style="margin-top: 10px; color:darkgrey;">Забыли пароль?</p>
             <a href="#" style="color:#bc4fe7;">
@@ -197,15 +205,15 @@
         <a href="#" id="home" class="btn" onclick="showLogForm('block')">Арендовать</a>
       </div>
 
-      <!-- <div class="box">
+      <div class="box">
         <div class="box-img">
-          <img src="img/BMW-iX.png" alt="">
+          <img src="img/mercedes-amg-gt-63.webp">
         </div>
-        <p>2022</p>
-        <h3>BMW IX</h3>
-        <h2>$74800 | $789 <span>/месяц</span></h2>
+        <p>2021</p>
+        <h3>Mercedes AMG GT-63 aerodynamic</h3>
+        <h2>$210800 | $2640 <span>/месяц</span></h2>
         <a href="#" id="home" class="btn" onclick="showLogForm('block')">Арендовать</a>
-      </div> -->
+      </div>
 
       <div class="box">
         <div class="box-img">

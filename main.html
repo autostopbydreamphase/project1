@@ -27,8 +27,6 @@
       <div class="dropdown">
         <a href="#" class="sign-in userEmail" id="userEmail">-</a>
         <div id="myDropdown" class="dropdown-content">
-          <a href="#">Пункт 1</a>
-          <a href="#">Пункт 2</a>
           <a href="#" onclick="signOut();">Выйти</a>
         </div>
       </div>
@@ -56,7 +54,6 @@
           <input type="date" name="dateEnd" id="dateEnd">
         </div>
         <input type="submit" name="submitButton" id="submitButton" class="btn">
-        <!-- onclick="showOfferForm('block')" -->
       </form>
     </div>
   </section>
@@ -66,25 +63,39 @@
     <div id="offerWindow">
       <img src="img/x-circle.svg" alt="cross" onclick="showOfferForm('none')" class="x-circle">
       <img src="img/icons8-tesla-model-x-96.png" alt="" class="formLogo">
-      <div class="regForm">
-        <form action="main.html" name="firstForm">
-          <input type="text" placeholder="Электронная почта" name="e-mail" id="e-mail" class="formField"
-            autocomplete="username">
-          <input type="text" placeholder="Подтверждение элекетронной почты" name="e-mailConfirmation"
-            id="e-mailConfirmation" class="formField" autocomplete="username">
-          <input type="password" placeholder="Пароль" name="password" id="password" class="formField"
-            autocomplete="new-password">
-          <input type="password" placeholder="Подтверждение пароля" name="passwordConfirmation"
-            id="passwordConfirmation" class="formField" autocomplete="new-password">
-          <input type="text" placeholder="Номер водительских прав" name="numberDriverLicense" id="numberDriverLicense"
-            class="formField">
-          <input type="text" placeholder="Мобильный номер" name="phoneNumber" id="phoneNumber" class="formField">
-          <button class="btn" onclick="" type="submit" style="font-weight: 400;">Зарегистрироваться</button>
+      <div class="offerForm">
+        <form action="main.html" name="mainForm">
+          <div class="custom-select">
+            <div class="select-selected">Выберите автомобиль</div>
+            <div class="select-items select-hide" id="carDropdown">
+              <div>Tesla Martin Katler</div>
+              <div>Tesla X</div>
+              <div>Porsche 911 Turbo S</div>
+              <div>Tesla Model S Plaid</div> 
+              <div>Tesla Charlie Deets</div>
+              <div>BMW M4 Competition Coupe</div>
+              <div>BMW M8 Gran Coupe Competition</div>
+              <div>Mercedes AMG GT-63</div>
+            </div>
+          </div> 
+          <div class="custom-select2">
+            <div class="select-selected2">Выберите тариф</div>
+            <div class="select-items2 select-hide2" id="tariffDropdown">
+              <div style="text-transform: uppercase;">МИНУТЫ</div>
+              <div style="text-transform: uppercase;">МИНУТЫ И КМ</div>
+              <div style="text-transform: uppercase;">ЧАСЫ И КМ</div>
+              <div style="text-transform: uppercase;">СУТКИ И КМ</div> 
+            </div>
+          </div>
+          <a href="#" class="btnOffer" onclick="" style="font-weight: 400;">Оформить заказ</a>
         </form>
+        <hr class="horizontal-line">
+        <div class="infoAboutOffer">
+          
+        </div>
       </div>
     </div>
   </section>
-
 
   <!--Ride-->
   <section class="ride" id="ride">
@@ -173,15 +184,15 @@
         <a href="#" id="home" class="btn" onclick="showOfferForm('block')">Арендовать</a>
       </div>
 
-      <!-- <div class="box">
+      <div class="box">
         <div class="box-img">
-          <img src="img/BMW-iX.png" alt="">
+          <img src="img/mercedes-amg-gt-63.webp">
         </div>
-        <p>2022</p>
-        <h3>BMW IX</h3>
-        <h2>$74800 | $789 <span>/месяц</span></h2>
+        <p>2021</p>
+        <h3>Mercedes AMG GT-63 aerodynamic</h3>
+        <h2>$210800 | $2640 <span>/месяц</span></h2>
         <a href="#" id="home" class="btn" onclick="showOfferForm('block')">Арендовать</a>
-      </div> -->
+      </div>
 
       <div class="box">
         <div class="box-img">
@@ -202,7 +213,6 @@
         <h2>$141500 | $1530 <span>/месяц</span></h2>
         <a href="#" id="home" class="btn" onclick="showOfferForm('block')">Арендовать</a>
       </div>
-
     </div>
   </section>
   <!--About-->
@@ -323,4 +333,4 @@
   <script src="js/main.js"></script>
 </body>
 
-</html>
+</html> 
