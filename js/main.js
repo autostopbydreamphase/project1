@@ -33,24 +33,31 @@ src.reveal(".services-container .box", { delay: 200, origin: "top" });
 src.reveal(".reviews-container", { delay: 200, origin: "top" });
 src.reveal(".newsletter .box", { delay: 150, origin: "bottom" });
 
-function showRegForm(state) {
-  document.getElementById("regWindow").style.display = state;
-  document.getElementById("grey-background1").style.display = state;
-}
 function showLogForm(state) {
   event.preventDefault();
-  document.getElementById("logWindow").style.display = state;
-  document.getElementById("grey-background2").style.display = state;
-}
+  var logWindow = document.getElementById("logWindow");
+  var greyBackground = document.getElementById("grey-background2");
 
-function showOfferForm(carModel, state) {
-  document.getElementById("offerWindow").style.display = state;
-  document.getElementById("grey-background3").style.display = state;
-  console.log(carModel);
-  var selectedCar = document.querySelector(".select-selected");
-  selectedCar.textContent = carModel;
-  var carDropdown = document.getElementById("carDropdown");
-  carDropdown.dataset.value = carModel;
+  if (state === "none") {
+    logWindow.classList.remove("visible");
+    greyBackground.classList.remove("visible");
+
+    setTimeout(function () {
+      logWindow.style.display = "none";
+    }, 400); // Задержка для завершения анимации
+
+    setTimeout(function () {
+      greyBackground.style.display = "none";
+    }, 400); // Задержка для завершения анимации
+  } else {
+    logWindow.style.display = "block";
+    greyBackground.style.display = "block";
+
+    setTimeout(function () {
+      logWindow.classList.add("visible");
+      greyBackground.classList.add("visible");
+    }, 50); // Небольшая задержка перед добавлением классов visible
+  }
 }
 
 function showOfferForm(state) {
@@ -59,21 +66,51 @@ function showOfferForm(state) {
 
   if (state === "none") {
     offerWindow.classList.remove("visible");
+    greyBackground.classList.remove("visible");
 
     setTimeout(function () {
       offerWindow.style.display = "none";
+    }, 400); // Задержка для завершения анимации
+
+    setTimeout(function () {
       greyBackground.style.display = "none";
-    }, 400);
+    }, 400); // Задержка для завершения анимации
   } else {
     offerWindow.style.display = "block";
     greyBackground.style.display = "block";
 
     setTimeout(function () {
       offerWindow.classList.add("visible");
-    }, 50);
+      greyBackground.classList.add("visible");
+    }, 50); // Небольшая задержка перед добавлением классов visible
   }
 }
 
+function showRegForm(state) {
+  var regWindow = document.getElementById("regWindow");
+  var greyBackground = document.getElementById("grey-background1");
+
+  if (state === "none") {
+    regWindow.classList.remove("visible");
+    greyBackground.classList.remove("visible");
+
+    setTimeout(function () {
+      regWindow.style.display = "none";
+    }, 400); // Задержка для завершения анимации
+
+    setTimeout(function () {
+      greyBackground.style.display = "none";
+    }, 400); // Задержка для завершения анимации
+  } else {
+    regWindow.style.display = "block";
+    greyBackground.style.display = "block";
+
+    setTimeout(function () {
+      regWindow.classList.add("visible");
+      greyBackground.classList.add("visible");
+    }, 50); // Небольшая задержка перед добавлением классов visible
+  }
+}
 
 function addToLocalStorage(event) {
   event.preventDefault();
